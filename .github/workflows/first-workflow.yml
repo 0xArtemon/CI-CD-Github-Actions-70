@@ -23,6 +23,10 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - uses: actions/checkout@v6
+    - name: Show current directory
+      run: pwd
+    - name: List all files
+      run: ll
     - name: Download dependencies
       run: mvn compile
     - name: Create a project build
